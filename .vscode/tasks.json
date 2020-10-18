@@ -1,0 +1,35 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Ada: Run current file with cleanup",
+			"type": "shell",
+			"command": "gnat clean ${fileBasenameNoExtension}",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": ["$ada"],
+			"dependsOn": "Ada: Run current file"
+		},
+		{
+			"label": "Ada: Run current file",
+			"type": "shell",
+			"command": "./${fileBasenameNoExtension}.exe",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": ["$ada"],
+			"dependsOn": "Ada: Build current file"
+		},
+		{
+			"label": "Ada: Build current file",
+			"type": "shell",
+			"command": "gnatmake",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"args": ["-g", "${fileBasename}"],
+			"problemMatcher": ["$ada"]
+		}
+	]
+}
