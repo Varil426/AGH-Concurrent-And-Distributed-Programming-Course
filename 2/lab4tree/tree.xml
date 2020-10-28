@@ -1,0 +1,26 @@
+<binary-tree>
+<root>
+<value> 14</value>
+<left-subtree>
+<value> 5</value>
+<left-subtree>
+<value> 4</value>
+</left-subtree>
+<right-subtree>
+<value> 6</value>
+</right-subtree>
+</left-subtree>
+<right-subtree>
+<value> 68</value>
+<left-subtree>
+<value> 21</value>
+<right-subtree>
+<value> 35</value>
+<right-subtree>
+<value> 62</value>
+</right-subtree>
+</right-subtree>
+</left-subtree>
+</right-subtree>
+</root>
+</binary-tree>
